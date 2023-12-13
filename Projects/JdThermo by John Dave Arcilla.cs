@@ -28,9 +28,7 @@ namespace JdThermo
 
         static void Main()
         {
-
             Console.WriteLine("Final Project \n");
-
             Console.WriteLine("Jd Thermometer!");
 
             double tempC;
@@ -103,20 +101,19 @@ namespace JdThermo
                     break;
             }
 
-            Console.WriteLine("\nCountdown using for loop:");
+            Console.WriteLine("\nCountdown:");
             for (int i = 10; i >= 1; i--)
             {
-                Console.WriteLine(i);
+                Console.WriteLine($"Temperature is cooling down: {i}");
             }
 
-            Console.WriteLine("\nCountdown using while loop:");
+            Console.WriteLine("\nCountdown:");
             int count = 10;
             while (count >= 1)
             {
-                Console.WriteLine(count);
+                Console.WriteLine($"Temperature is still dropping: {count}");
                 count--;
             }
-
 
             string tempStatus = GetTemperatureStatus(userTempC);
             Console.WriteLine($"\nTemperature Status: It's a {tempStatus} day!");
