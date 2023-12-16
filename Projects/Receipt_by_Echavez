@@ -1,0 +1,44 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Module 1
+        Console.WriteLine("Welcome to the Receipt Generator!");
+
+        // Module 2 
+        string itemName = "Item";
+        double itemPrice = 10.99;
+        int quantity = 3;
+
+        // Module 3
+        double total = itemPrice * quantity;
+
+        Console.WriteLine($"Item: {itemName}");
+        Console.WriteLine($"Price per unit: ${itemPrice}");
+        Console.WriteLine($"Quantity: {quantity}");
+        Console.WriteLine($"Total: ${total}");
+
+        // Module 4
+        Console.Write("Enter customer name: ");
+        string customerName = Console.ReadLine();
+
+        // Module 3
+        Console.WriteLine($"Thank you, {customerName}!");
+
+        // Module 5
+        PrintReceipt(itemName, itemPrice, quantity, total, customerName);
+    }
+
+    static void PrintReceipt(string itemName, double itemPrice, int quantity, double total, string customerName)
+    {
+       
+        Console.WriteLine("\nReceipt:");
+        Console.WriteLine($"Item: {itemName}");
+        Console.WriteLine($"Price per unit: ${itemPrice}");
+        Console.WriteLine($"Quantity: {quantity}");
+        Console.WriteLine($"Total: ${total}");
+        Console.WriteLine($"Customer: {customerName}");
+    }
+}
