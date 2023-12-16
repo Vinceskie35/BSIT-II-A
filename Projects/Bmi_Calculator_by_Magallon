@@ -1,0 +1,97 @@
+using System;
+
+class BMICalculator
+{
+                static void Main()
+     {
+                    // Module 1 
+                    Console.WriteLine("Welcome to the BMI Calculator!");
+
+                    // Module 2
+                    Console.Write("Enter your weight in kilograms: ");
+                    double weight = double.Parse(Console.ReadLine());
+
+                    Console.Write("Enter your height in meters: ");
+                    double height = double.Parse(Console.ReadLine());
+
+                    double bmi = weight / Math.Pow(height, 2);
+
+                    Console.WriteLine($"Your BMI is: {bmi:F2}");
+
+                    // Module 3 
+                    if (bmi < 18.5)
+                    {
+                        Console.WriteLine("You are underweight.");
+                    }
+                    else if (bmi >= 18.5 && bmi < 25)
+                    {
+                        Console.WriteLine("Your weight is normal.");
+                    }
+                    else if (bmi >= 25 && bmi < 30)
+                    {
+                        Console.WriteLine("You are overweight.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You are obese.");
+                    }
+
+                    // Module 4
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        if (i % 2 == 0)
+                        {
+                            Console.WriteLine($"Skipping even number: {i}");
+                            continue;
+                        }
+                        else if (i == 7)
+                        {
+                            Console.WriteLine("Breaking at 7!");
+                            break;
+                        }
+                        Console.WriteLine($"Processing: {i}");
+                    }
+
+                    // Module 5 
+                    double userWeight, userHeight;
+
+                    Console.Write("Enter your weight in kilograms: ");
+                    userWeight = double.Parse(Console.ReadLine());
+
+                    Console.Write("Enter your height in meters: ");
+                    userHeight = double.Parse(Console.ReadLine());
+
+                    double userBMI = CalculateBMI(userWeight, userHeight);
+                    string healthStatus = AssessHealth(userBMI);
+
+                    Console.WriteLine($"Your BMI is: {userBMI:F2}");
+                    Console.WriteLine($"You are {healthStatus}.");
+                }
+
+                // Method to calculate BMI
+                static double CalculateBMI(double weight, double height)
+                {
+                    return weight / Math.Pow(height, 2);
+                }
+
+                // Method to assess health status based on BMI
+                static string AssessHealth(double bmiValue)
+                {
+                    if (bmiValue < 18.5)
+                    {
+                        return "underweight";
+                    }
+                    else if (bmiValue >= 18.5 && bmiValue < 25)
+                    {
+                        return "normal weight";
+                    }
+                    else if (bmiValue >= 25 && bmiValue < 30)
+                    {
+                        return "overweight";
+                    }
+                    else
+                    {
+                        return "obese";
+                    }
+    }
+}
