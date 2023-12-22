@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BernardsBankLoan
+namespace BernardsBankProgram
 {
     class Program
     {
