@@ -1,0 +1,170 @@
+using System;
+
+namespace SanchezIIIRestaurant
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Your code goes here
+            
+            Console.WriteLine("Hello, world!");
+            
+            // More code...
+            
+            Console.ReadLine();
+        }
+    }
+}
+Basic Concepts (Output)
+using System;
+
+namespace BasicConcepts
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Outputting text
+            Console.WriteLine("Hello, world!");
+
+            // Outputting variables
+            string name = "Florencio SanchezIII";
+            int age = 20;
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+
+            // Formatted output using placeholders
+            Console.WriteLine("My name is {0} and I am {1} years old", name, age);
+
+            // Outputting using string interpolation (C# 6 and above)
+            Console.WriteLine($"My name is {Florencio SanchezIII} and I am {20} years old");
+
+            // Outputting numbers
+            double num1 = 3.14159;
+            int num2 = 42;
+            Console.WriteLine("Pi: " + num1);
+            Console.WriteLine("Answer to the Ultimate Question of Life, the Universe, and Everything: " + num2);
+
+            // Formatting numbers
+            Console.WriteLine("Pi: {0:N2}", num1);
+            Console.WriteLine("Answer to the Ultimate Question of Life, the Universe, and Everything: {0:D4}", num2);
+
+            // Outputting boolean values
+            bool isTrue = true;
+            bool isFalse = false;
+            Console.WriteLine("Is it true? " + isTrue);
+            Console.WriteLine("Is it false? " + isFalse);
+        }
+    }
+}
+
+variables
+using System;
+
+namespace Variables
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Declaring variables
+            int age;
+            string name;
+
+            // Assigning values to variables
+            age = 20;
+            name = "Florencio SanchezIII";
+
+            // Outputting variables
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Age: " + age);
+
+            // Initializing variables
+            int height = 160;
+            bool isStudent = true;
+
+            // Modifying variables
+            age = age + 1;
+            height += 10;
+
+            // Outputting modified variables
+            Console.WriteLine("New age: " + age);
+            Console.WriteLine("New height: " + height);
+
+            // Constants
+            const double pi = 3.14159;
+            Console.WriteLine("Value of pi: " + pi);
+
+            // Multiple variable declaration and initialization
+            int num1 = 10, num2 = 20, num3 = 30;
+            Console.WriteLine("Sum: " + (num1 + num2 + num3));
+
+            // Variable scope
+            {
+                int x = 5;
+                Console.WriteLine("x: " + x);
+            }
+            // The following line would cause a compile-time error
+            // Console.WriteLine("x: " + x);
+        }
+    }
+}
+Data Types
+using System;
+
+namespace DataTypes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Numeric data types
+            int number = 10;
+            double decimalNumber = 3.14;
+            float floatNumber = 2.5f;
+            decimal bigDecimalNumber = 100.123m;
+
+            // Text data type
+            string text = "Hello, world!";
+
+            // Boolean data type
+            bool isTrue = true;
+
+            // Character data type
+            char character = 'A';
+
+            // Outputting data types
+            Console.WriteLine("Number: " + number);
+            Console.WriteLine("Decimal number: " + decimalNumber);
+            Console.WriteLine("Float number: " + floatNumber);
+            Console.WriteLine("Big decimal number: " + bigDecimalNumber);
+            Console.WriteLine("Text: " + text);
+            Console.WriteLine("Is true? " + isTrue);
+            Console.WriteLine("Character: " + character);
+            
+            // Type conversion
+            double convertedNumber = Convert.ToDouble(number);
+            int roundedNumber = (int)decimalNumber;
+
+            Console.WriteLine("Converted number: " + convertedNumber);
+            Console.WriteLine("Rounded number: " + roundedNumber);
+        }
+    }
+}
+Doing Math
+using System;
+
+namespace DoingMath
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int operand1 = 10;
+            int operand2 = 5;
+
+            int sum = operand1 + operand2;
+            int difference = operand1 - operand2;
+            int product = operand1 * operand2;
+            int quotient = operand1 / operand2;
